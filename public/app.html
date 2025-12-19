@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AirSafe - App</title>
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Leaflet -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">AirSafe</div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a class="active" href="app.html">App</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h1>AirSafe App</h1>
+
+      <div class="controls">
+        <div class="field">
+          <label for="lat">Latitude</label>
+          <input id="lat" type="text" value="38.9897" />
+        </div>
+        <div class="field">
+          <label for="lon">Longitude</label>
+          <input id="lon" type="text" value="-76.9378" />
+        </div>
+
+        <div class="field">
+          <label for="favName">Favorite name</label>
+          <input id="favName" type="text" placeholder="e.g., Rec Center" />
+        </div>
+
+        <div class="btn-row">
+          <button class="btn primary" id="checkBtn">Check</button>
+          <button class="btn" id="saveBtn">Save Favorite</button>
+        </div>
+      </div>
+
+      <div class="outputs">
+        <div id="weatherOut" class="pill">Weather: —</div>
+        <div id="airOut" class="pill">Air: —</div>
+      </div>
+    </section>
+
+    <section class="grid-2">
+      <div class="card">
+        <h2>Map</h2>
+        <div id="map" class="map"></div>
+      </div>
+
+      <div class="card">
+        <h2>Favorites</h2>
+        <div id="favoritesOut" class="favorites"></div>
+      </div>
+    </section>
+
+    <section class="card chart-card">
+      <h2>Air Measurements (Top Values)</h2>
+      <div class="chart-wrap">
+        <canvas id="chart"></canvas>
+      </div>
+      <p class="muted">
+        Note: values depend on the nearest OpenAQ station and available sensors.
+      </p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div>AirSafe • INST377 Final</div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

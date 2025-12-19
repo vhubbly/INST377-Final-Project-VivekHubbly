@@ -30,7 +30,7 @@ This guide is for future developers taking over AirSafe. You know web developmen
 
 ---
 
-## 1) Setup & Installation
+## 1 Setup & Installation
 
 ### Prerequisites
 
@@ -56,9 +56,9 @@ npm install
 
 ---
 
-## 2) Environment Variables
+## 2 Environment Variables
 
-Create a `.env.local` file in the project root:
+Create a `.env.local` file in the project root, and set environment variables in vercel based on keys:
 
 ```bash
 # OpenAQ
@@ -81,7 +81,7 @@ SUPABASE_SERVICE_ROLE_KEY="your_service_role_key"  # server-side only
 
 ---
 
-## 3) Running the application locally
+## 3 Running the application locally
 
 ### Run the frontend locally
 
@@ -114,7 +114,7 @@ Open:
 
 ---
 
-## 4) Running tests
+## 4 Running tests
 
 If tests exist, run:
 
@@ -130,7 +130,7 @@ If no tests were added, future development should add tests for:
 
 ---
 
-## 5) Server API (Endpoints)
+## 5 Server API (Endpoints)
 
 All endpoints return JSON. These endpoints are called by the frontend via Fetch API.
 
@@ -182,7 +182,7 @@ All endpoints return JSON. These endpoints are called by the frontend via Fetch 
 
 ---
 
-## 6) Database (Supabase)
+## 6 Database (Supabase)
 
 ### favorites table
 
@@ -191,22 +191,9 @@ All endpoints return JSON. These endpoints are called by the frontend via Fetch 
 * lat (float)
 * lon (float)
 * created_at (timestamp)
-
-### readings table
-
-* id (uuid/int)
-* lat (float)
-* lon (float)
-* taken_at (timestamp)
-* pm25 (float, nullable)
-* pm10 (float, nullable)
-* temp_c (float)
-* humidity_pct (int)
-* wind_mps (float)
-
 ---
 
-## 7) Known Bugs / Limitations
+## 7 Known Bugs / Limitations
 
 * OpenAQ data availability varies by location; some places may have limited or no sensors nearby.
 * Latest measurements may return sensor IDs and values; mapping sensor IDs to pollutant names requires using the location’s `sensors` list.
@@ -214,7 +201,7 @@ All endpoints return JSON. These endpoints are called by the frontend via Fetch 
 
 ---
 
-## 8) Roadmap (Future Development)
+## 8 Roadmap (Future Development)
 
 * Add pollen support (if integrating a pollen provider).
 * Improve “safe training” recommendations using verified thresholds and user-specific sensitivity settings (asthma/allergies).

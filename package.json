@@ -1,0 +1,8 @@
+{
+  "name": "airsafe",
+  "version": "1.0.0",
+  "private": false,
+  "dependencies": {
+    "@supabase/supabase-js": "^2.49.1"
+  }
+}

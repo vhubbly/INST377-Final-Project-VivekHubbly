@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AirSafe - About</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">AirSafe</div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="app.html">App</a>
+      <a class="active" href="about.html">About</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h1>About AirSafe</h1>
+      <p>
+        AirSafe is a lightweight dashboard designed for college students who train outdoors.
+        It pulls local monitoring station readings from OpenAQ and current weather from OpenWeather.
+      </p>
+
+      <h2>Data Sources</h2>
+      <ul class="bullets">
+        <li>OpenAQ (v3): nearest monitoring location + latest measurements</li>
+        <li>OpenWeather: current conditions for the same coordinates</li>
+        <li>Supabase: saves your favorite locations</li>
+      </ul>
+
+      <a class="btn primary" href="app.html">Go to App</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div>AirSafe • INST377 Final</div>
+  </footer>
+</body>
+</html>
